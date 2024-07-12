@@ -3,7 +3,7 @@ import { conexionApi } from './conexionApi'
 import App from './components/App';
 import { StrictMode } from 'react';
 const resultados = conexionApi.imagenRandom();
-console.log(resultados);
+console.log(typeof resultados);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
