@@ -1,7 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import { conexionAPI } from './conexionApi'
 import App from './components/App';
-import { useState } from 'react';
 
 async function tomaDatos() {
 
