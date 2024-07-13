@@ -1,13 +1,22 @@
 import ReactDOM from 'react-dom/client'
-import { conexionApi } from './conexionApi'
+import { conexionAPI } from './conexionApi'
 import App from './components/App';
-import { StrictMode } from 'react';
-const resultados = conexionApi.imagenRandom();
-console.log(typeof resultados);
+import { useState } from 'react';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <h1>Hola Mundo</h1>
-    <App />
-  </StrictMode>
-)
+async function tomaDatos() {
+
+  const datos = await conexionAPI.imagenRandom();
+
+  console.log(datos.items);
+
+  ReactDOM.createRoot(document.getElementById('root')).render(
+
+    <App datos={datos.items} />
+    
+  )
+
+}
+
+tomaDatos();
+
+

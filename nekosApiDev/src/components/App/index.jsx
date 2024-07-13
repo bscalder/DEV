@@ -2,10 +2,13 @@ import style from "./App.module.css";
 import Tarjeta from "../Tarjeta";
 
 const App = (props) => {
-    
-const {dataImagen} = props;
+
+    const { datos } = props;
     return (
-        <section>
+        <section className={style.app}>
+            {datos.map((item) => (
+                <Tarjeta datos={item} />
+            ))}
         </section>
     )
 }
