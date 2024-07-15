@@ -1,0 +1,9 @@
+.encabezado {
+    position: static;
+    background-color: rgba(0, 0, 139, 0.90);
+    color: lightblue;
+    width: 86%;
+    height: auto;
+    margin: 10px 10px;
+    border-radius: 20px;
+}
